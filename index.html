@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bevara Rajasekhar - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <h2>Loading Portfolio...</h2>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Transition Overlays -->
+    <div class="page-transition-overlay" id="aiTransitionOverlay">
+        <div class="transition-content ai-content">
+            <div class="robot-animation">
+                <div class="perfect-robot large-robot-transition">
+                    <div class="robot-head-advanced">
+                        <div class="head-top">
+                            <div class="antenna antenna-left"></div>
+                            <div class="head-light"></div>
+                            <div class="antenna antenna-right"></div>
+                        </div>
+                        <div class="face-panel">
+                            <div class="eye-system">
+                                <div class="eye-housing eye-left"><div class="eye-outer"><div class="eye-inner"><div class="pupil"></div><div class="iris"></div></div></div><div class="eye-glow"></div></div>
+                                <div class="eye-housing eye-right"><div class="eye-outer"><div class="eye-inner"><div class="pupil"></div><div class="iris"></div></div></div><div class="eye-glow"></div></div>
+                            </div>
+                            <div class="mouth-system"><div class="mouth-grid"><div class="mouth-pixel"></div><div class="mouth-pixel"></div><div class="mouth-pixel"></div><div class="mouth-pixel"></div><div class="mouth-pixel"></div></div></div>
+                        </div>
+                    </div>
+                    <div class="robot-neck"></div>
+                    <div class="robot-body-advanced">
+                        <div class="chest-armor"><div class="armor-plate plate-1"></div><div class="armor-plate plate-2"></div><div class="armor-plate plate-3"></div></div>
+                        <div class="control-panel"><div class="panel-screen"><div class="screen-content"><div class="data-line line-1"></div><div class="data-line line-2"></div><div class="data-line line-3"></div><div class="data-line line-4"></div></div></div><div class="control-buttons"><div class="control-btn btn-1"></div><div class="control-btn btn-2"></div><div class="control-btn btn-3"></div></div></div>
+                        <div class="power-core"><div class="core-outer"><div class="core-inner"><div class="core-center"></div></div></div><div class="power-rings"><div class="power-ring ring-1"></div><div class="power-ring ring-2"></div><div class="power-ring ring-3"></div></div></div>
+                    </div>
+                    <div class="robot-arms-advanced">
+                        <div class="arm arm-left"><div class="shoulder-joint"></div><div class="upper-arm"></div><div class="elbow-joint"></div><div class="forearm"></div><div class="hand"></div></div>
+                        <div class="arm arm-right"><div class="shoulder-joint"></div><div class="upper-arm"></div><div class="elbow-joint"></div><div class="forearm"></div><div class="hand"></div></div>
+                    </div>
+                </div>
+            </div>
+            <h2>Entering AI/ML Universe...</h2>
+        </div>
+    </div>
+
+    <div class="page-transition-overlay" id="frontendTransitionOverlay">
+        <div class="transition-content frontend-content">
+            <div class="design-workspace-animation">
+                <div class="workspace-container large-workspace-transition">
+                    <div class="monitor-setup">
+                        <div class="monitor-stand"></div>
+                        <div class="monitor-screen">
+                            <div class="screen-bezel">
+                                <div class="screen-content">
+                                    <div class="ide-interface">
+                                        <div class="ide-header"><div class="ide-tabs"><div class="tab tab-active">index.html</div><div class="tab">style.css</div><div class="tab">script.js</div></div></div>
+                                        <div class="ide-sidebar"></div>
+                                        <div class="ide-editor"><div class="line-numbers"></div><div class="code-content"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="keyboard"></div>
+                    <div class="mouse"></div>
+                    <div class="design-tools"></div>
+                </div>
+            </div>
+            <h2>Launching Frontend Studio...</h2>
+        </div>
+    </div>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav" id="desktopNav">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <h2>Bevara Rajasekhar</h2>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#certificates" class="nav-link">Certificates</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+
+      <!-- Resume: opens Resume section (PDF + download button) -->
+      <li class="resume-nav-item">
+        <a href="Rajasekhar Bevara.pdf" class="nav-link">
+          <i class="fas fa-file-alt"></i>
+          <span>Resume</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open mobile menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    </button>
+
+    <!-- Mobile Sidebar -->
+    <nav class="mobile-sidebar" id="mobileSidebar">
+        <div class="sidebar-header">
+            <h2>Portfolio</h2>
+            <button class="sidebar-close" id="sidebarClose" aria-label="Close sidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="#home" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> About</a></li>
+            <li><a href="#education" class="nav-link"><i class="fas fa-graduation-cap"></i> Education</a></li>
+            <li><a href="#skills" class="nav-link"><i class="fas fa-code"></i> Skills</a></li>
+            <li><a href="#experience" class="nav-link"><i class="fas fa-briefcase"></i> Experience</a></li>
+            <li><a href="#projects" class="nav-link"><i class="fas fa-project-diagram"></i> Projects</a></li>
+            <li><a href="#certificates" class="nav-link"><i class="fas fa-certificate"></i> Certificates</a></li>
+            <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+            <li class="mobile-resume-item">
+                <a href="Rajasekhar_Resume.pdf" target="_blank" class="mobile-resume-btn" id="mobileResumeDownloadBtn">
+                    <i class="fas fa-download"></i>
+                    <span>Download Resume</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section home-section">
+            <div class="home-background">
+                <div class="floating-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                    <div class="shape shape-4"></div>
+                    <div class="shape shape-5"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-profile-image animate-fade-in">
+                        <img src="a.jpg" alt="Bevara Rajasekhar" class="profile-img-hero">
+                    </div>
+
+                    <h1 class="hero-title">Hi, I'm <span class="highlight">Bevara Rajasekhar</span></h1>
+                    <div class="typing-container">
+                        <span class="typing-text" id="typingText">AI/ML Engineering Student</span>
+                        <span class="cursor">|</span>
+                    </div>
+                    <p class="hero-description">AI ML engineering student skilled in Python, SQL, full-stack development, and data-driven problem solving. Strong in adaptability, leadership, and delivering innovative, scalable solutions.</p>
+                    
+                    <div class="career-cards">
+                        <a href="ai-ml.html" class="career-card transition-trigger" data-transition="ai">
+                            <div class="card-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3>AI/ML Engineer</h3>
+                            <p>Developing intelligent systems and machine learning solutions with 90% model accuracy</p>
+                            <span class="card-link-icon"><i class="fas fa-arrow-right"></i></span>
+                        </a>
+                        
+                        <a href="frontend-dev.html" class="career-card transition-trigger" data-transition="frontend">
+                            <div class="card-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <h3>Frontend Developer</h3>
+                            <p>Creating beautiful, responsive user interfaces with modern design principles</p>
+                            <span class="card-link-icon"><i class="fas fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+
+                    <div class="hero-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:rajasekhar6105@gmail.com" class="contact-value">rajasekhar6105@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+917793966921" class="contact-value">+91-7793966921</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-title">About Me</h2>
+                        <div class="about-description">
+                            <p>I'm a passionate AI/ML engineering student currently pursuing my B.Tech at JNTUGV (Sri Sivani College of Engineering). With a strong foundation in both artificial intelligence and web development, I strive to create innovative solutions that bridge the gap between cutting-edge technology and real-world applications.</p>
+                            
+                            <p>My journey in technology began with a curiosity about how machines can learn and adapt, leading me to explore the fascinating world of artificial intelligence. Along the way, I've developed expertise in full-stack development, allowing me to build complete solutions from concept to deployment.</p>
+                        </div>
+                        
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <div class="stat-number" data-target="90">0</div>
+                                <div class="stat-label">Model Accuracy %</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number" data-target="5">0</div>
+                                <div class="stat-label">Web Applications</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number" data-target="3">0</div>
+                                <div class="stat-label">Internships</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number" data-target="7.7">0</div>
+                                <div class="stat-label">CGPA</div>
+                            </div>
+                        </div>
+
+                        <div class="about-buttons">
+                            <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                            <a href="#projects" class="btn btn-secondary">View Projects</a>
+                        </div>
+                    </div>
+                    
+                    <div class="about-image">
+                        <div class="image-container">
+                            <img src="a.jpg" alt="Bevara Rajasekhar" class="profile-img">
+                            <div class="floating-elements">
+                                <div class="float-item float-1">
+                                    <i class="fab fa-python"></i>
+                                </div>
+                                <div class="float-item float-2">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <div class="float-item float-3">
+                                    <i class="fab fa-js-square"></i>
+                                </div>
+                                <div class="float-item float-4">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3D Floor Steps Education Section -->
+       <!-- Education Timeline Section -->
+<section id="education" class="section education-timeline-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Education</h2>
+      <p class="section-subtitle">My academic roadmap to AI & ML engineering.</p>
+    </div>
+
+    <div class="education-timeline-wrapper">
+      <!-- central line from your existing CSS -->
+      <div class="timeline-line">
+        <div class="timeline-progress"></div>
+      </div>
+
+      <div class="timeline-items">
+        <!-- B.Tech -->
+        <div class="timeline-item animate">
+          <div class="timeline-marker">
+            <div class="marker-dot active">
+              <span>UG</span>
+            </div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-card">
+              <h3 class="timeline-title">B.Tech in AI & Machine Learning</h3>
+              <p class="timeline-institute">JNTUGV – Sri Sivani College of Engineering</p>
+              <p class="timeline-meta">2022 – Present · CGPA: 7.7 (up to 3‑2)</p>
+              <ul class="timeline-list">
+                <li>Specialized in Artificial Intelligence and Machine Learning.</li>
+                <li>Applied ML/DL concepts in projects like retail price optimization and body‑fat prediction.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Intermediate -->
+        <div class="timeline-item animate">
+          <div class="timeline-marker">
+            <div class="marker-dot">
+              <span>Inter</span>
+            </div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-card">
+              <h3 class="timeline-title">Intermediate (MPC)</h3>
+              <p class="timeline-institute">A.P. Model School, O.V. Peta</p>
+              <p class="timeline-meta">2020 – 2022 · 69%</p>
+              <ul class="timeline-list">
+                <li>Built strong fundamentals in Mathematics and Physics.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Class X -->
+        <div class="timeline-item animate">
+          <div class="timeline-marker">
+            <div class="marker-dot">
+              <span>X</span>
+            </div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-card">
+              <h3 class="timeline-title">Secondary Education (Class X)</h3>
+              <p class="timeline-institute">A.P. Model School, O.V. Peta</p>
+              <p class="timeline-meta">2019 – 2020 · CGPA: 8.6</p>
+              <ul class="timeline-list">
+                <li>Developed early interest in science, problem solving, and technology.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Future Goal (optional) -->
+        <div class="timeline-item animate">
+          <div class="timeline-marker">
+            <div class="marker-dot future">
+              <span>Next</span>
+            </div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-card">
+              <h3 class="timeline-title">Future Path</h3>
+              <p class="timeline-institute">AI/ML Engineer · Full Stack Developer</p>
+              <p class="timeline-meta">Focused on real‑world ML deployments & scalable web systems.</p>
+              <ul class="timeline-list">
+                <li>Looking for roles where AI models go to production with clean engineering.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <h2 class="section-title">My Technical Skills</h2>
+                <p class="section-subtitle">A detailed look into my expertise.</p>
+
+                <div class="skills-content-grid">
+                    <div class="skills-list-panel">
+                        <div class="skills-filter">
+                            <button class="filter-btn active" data-filter="all">All Skills</button>
+                            <button class="filter-btn" data-filter="aiml">AI/ML</button>
+                            <button class="filter-btn" data-filter="frontend">Frontend</button>
+                            <button class="filter-btn" data-filter="database">Database</button>
+                        </div>
+                        <div class="skills-grid" id="skillsGrid">
+                            <!-- Skill cards will be dynamically loaded here -->
+                        </div>
+                    </div>
+                    
+                    <div class="skill-details-panel" id="skillDetailsPanel">
+                        <div class="skill-info">
+                            <div class="skill-icon-large" id="skillIconLarge">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3 id="skillName">Select a skill</h3>
+                            <div class="skill-proficiency">
+                                <span>Proficiency: </span>
+                                <div class="proficiency-bar">
+                                    <div class="proficiency-fill" id="proficiencyFill"></div>
+                                </div>
+                                <span id="proficiencyText">0%</span>
+                            </div>
+                            <p id="skillDescription">Click on a skill card to see detailed information about my expertise, related projects, and certifications.</p>
+                            
+                            <div class="related-projects" id="relatedProjects">
+                                <h4><i class="fas fa-project-diagram"></i> Related Projects:</h4>
+                                <div class="projects-list" id="projectsList">
+                                </div>
+                            </div>
+
+                            <div class="related-certifications" id="relatedCertifications">
+                                <h4><i class="fas fa-certificate"></i> Certifications:</h4>
+                                <div class="certifications-list" id="certificationsList">
+                                </div>
+                            </div>
+                            
+                            <div class="skill-technologies" id="skillTechnologies">
+                                <h4><i class="fas fa-tools"></i> Technologies:</h4>
+                                <div class="tech-tags" id="techTags">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+       <section id="experience" class="section education-timeline-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Experience</h2>
+      <p class="section-subtitle">Internships across <span class="highlight-domain">AI/ML</span>, <span class="highlight-domain">Deep Learning</span>, and <span class="highlight-domain">Full Stack</span>.</p>
+    </div>
+
+    <div class="education-timeline-wrapper">
+      <div class="timeline-line">
+        <div class="timeline-progress"></div>
+      </div>
+
+      <div class="timeline-items">
+        <!-- Full Stack Intern -->
+        <div class="timeline-item animate">
+          <div class="timeline-marker">
+            <div class="marker-dot active">
+              <span>FS</span>
+            </div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <div class="timeline-icon fullstack-icon">🖥️</div>
+                <div>
+                  <h3 class="timeline-title">
+                    Full Stack Intern
+                    <span class="domain-pill domain-fullstack">Full Stack Development</span>
+                  </h3>
+                  <p class="timeline-institute">Micro Information Technologies · Haryana, India</p>
+                  <p class="timeline-meta">Jun 2025 – Jul 2025</p>
+                </div>
+              </div>
+              <ul class="timeline-list">
+                <li>Developed 5+ responsive web apps using HTML, CSS, JavaScript, and Flask.</li>
+                <li>Integrated ML models (~85% accuracy) into interactive user interfaces.</li>
+                <li>Collaborated with a team of 4 developers to ship features on time.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI & ML Intern -->
+        <div class="timeline-item animate">
+          <div class="timeline-marker">
+            <div class="marker-dot">
+              <span>AI</span>
+            </div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <div class="timeline-icon ai-icon">🤖</div>
+                <div>
+                  <h3 class="timeline-title">
+                    AI & ML Intern
+                    <span class="domain-pill domain-aiml">AI & Machine Learning</span>
+                  </h3>
+                  <p class="timeline-institute">BITS Pilani · Hyderabad</p>
+                  <p class="timeline-meta">May 2025</p>
+                </div>
+              </div>
+              <ul class="timeline-list">
+                <li>Designed AI‑based predictive solutions improving analysis efficiency by ~40%.</li>
+                <li>Worked with large datasets and neural networks for pattern recognition.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Deep Learning Intern -->
+        <div class="timeline-item animate">
+          <div class="timeline-marker">
+            <div class="marker-dot">
+              <span>DL</span>
+            </div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <div class="timeline-icon dl-icon">🧠</div>
+                <div>
+                  <h3 class="timeline-title">
+                    Deep Learning Intern
+                    <span class="domain-pill domain-dl">Deep Learning</span>
+                  </h3>
+                  <p class="timeline-institute">Shamgar Software Solutions · Remote</p>
+                  <p class="timeline-meta">Dec 2024 – Feb 2025</p>
+                </div>
+              </div>
+              <ul class="timeline-list">
+                <li>Built and optimized deep learning models with TensorFlow and PyTorch.</li>
+                <li>Reached ~90% accuracy using preprocessing and hyperparameter tuning.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Python Intern – Elevate Labs -->
+        <div class="timeline-item animate">
+          <div class="timeline-marker">
+            <div class="marker-dot">
+              <span>Py</span>
+            </div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <div class="timeline-icon python-icon">🐍</div>
+                <div>
+                  <h3 class="timeline-title">
+                    Python Intern
+                    <span class="domain-pill domain-python">Core Python</span>
+                  </h3>
+                  <p class="timeline-institute">Elevate Labs · Python Internship</p>
+                  <p class="timeline-meta">Duration: 2 Months</p>
+                </div>
+              </div>
+              <ul class="timeline-list">
+                <li>Worked on Python‑based scripts and mini‑apps to support data workflows.</li>
+                <li>Improved Python automation, file handling, and modular code design.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="section projects-section">
+  <div class="container">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="projects-filter">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="aiml">AI/ML</button>
+      <button class="filter-btn" data-filter="web">Web Development</button>
+    </div>
+
+    <div class="projects-grid">
+      <!-- Retail Price Optimization -->
+      <div class="project-card" data-category="aiml">
+        <div class="project-image">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <div class="project-header">
+          <h3>Retail Price Optimization</h3>
+          <div class="project-links">
+            <a href="https://github.com/Ajaybevara/Retail-Price" target="_blank"
+               class="project-link" title="GitHub Repo">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://retail-price-optimization.streamlit.app/" target="_blank"
+               class="project-link" title="Live Demo">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+        <div class="project-summary">
+          <p>
+            Advanced machine learning model for retail price optimization achieving
+            92% accuracy using Python and scikit-learn. Includes a Streamlit UI.
+          </p>
+        </div>
+        <div class="tech-tags">
+          <span>Python</span>
+          <span>Machine Learning</span>
+          <span>Scikit-learn</span>
+          <span>Streamlit</span>
+        </div>
+      </div>
+
+      <!-- Body Fat Prediction -->
+      <div class="project-card" data-category="aiml">
+        <div class="project-image">
+          <i class="fas fa-user-md"></i>
+        </div>
+        <div class="project-header">
+          <h3>Body Fat Prediction</h3>
+          <div class="project-links">
+            <a href="https://github.com/Ajaybevara/Body-fat-prediction" target="_blank"
+               class="project-link" title="GitHub Repo">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://body-fat-prediction.streamlit.app/" target="_blank"
+               class="project-link" title="Live Demo">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+        <div class="project-summary">
+          <p>
+            Deep learning system for body fat prediction with 88% precision using
+            neural networks (Regression model).
+          </p>
+        </div>
+        <div class="tech-tags">
+          <span>Deep Learning</span>
+          <span>TensorFlow</span>
+          <span>Neural Networks</span>
+          <span>Python</span>
+        </div>
+      </div>
+
+      <!-- Village Durga Devi Website (Hindu icon) -->
+      <div class="project-card" data-category="web">
+        <div class="project-image">
+          <!-- Hindu temple icon -->
+          <span class="project-icon-temple">🛕</span>
+        </div>
+        <div class="project-header">
+          <h3>Village Durga Devi Website</h3>
+          <div class="project-links">
+            <a href="https://github.com/Ajaybevara/Durga_Devi" target="_blank"
+               class="project-link" title="GitHub Repo">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://durga-devi.vercel.app" target="_blank"
+               class="project-link" title="Live Demo">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+        <div class="project-summary">
+          <p>
+            Interactive devotional website for Durga Devi with temple information,
+            pooja details, gallery, and contact section, built using HTML, CSS, and JavaScript.
+          </p>
+        </div>
+        <div class="tech-tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+        </div>
+      </div>
+
+      <!-- Personal Portfolio Website -->
+      <div class="project-card" data-category="web">
+        <div class="project-image">
+          <i class="fas fa-globe"></i>
+        </div>
+        <div class="project-header">
+          <h3>Personal Portfolio Website</h3>
+          <div class="project-links">
+            <a href="https://github.com/Ajaybevara/My-portfolio" target="_blank"
+               class="project-link" title="GitHub Repo">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://ajaybevara.github.io/My-portfolio/" target="_blank"
+               class="project-link" title="Live Demo">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+        <div class="project-summary">
+          <p>
+            Responsive portfolio website with interactive features and modern design
+            principles using HTML, CSS, and JavaScript.
+          </p>
+        </div>
+        <div class="tech-tags">
+          <span>HTML5</span>
+          <span>CSS3</span>
+          <span>JavaScript</span>
+        </div>
+      </div>
+
+      <!-- Simple Calculator Web App -->
+      <div class="project-card" data-category="web">
+        <div class="project-image">
+          <i class="fas fa-calculator"></i>
+        </div>
+        <div class="project-header">
+          <h3>Simple Calculator Web App</h3>
+          <div class="project-links">
+            <a href="https://github.com/Ajaybevara/calculator" target="_blank"
+               class="project-link" title="GitHub Repo">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://ajaybevara.github.io/calculator/" target="_blank"
+               class="project-link" title="Live Demo">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+        <div class="project-summary">
+          <p>
+            Modern calculator web application with dark/light mode support, built
+            with HTML, CSS, and JavaScript.
+          </p>
+        </div>
+        <div class="tech-tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+        </div>
+      </div>
+
+      <!-- Srikakulam Police Grievance Portal -->
+      <div class="project-card" data-category="web">
+        <div class="project-image">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <div class="project-header">
+          <h3>Srikakulam Police Grievance Portal</h3>
+          <div class="project-links">
+            <a href="https://github.com/Gnaneswar22/sklmpoliceweb" target="_blank"
+               class="project-link" title="GitHub Repo">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <div class="project-summary">
+          <p>
+            Civic-tech web app for transparent complaint tracking. (Team Project)
+          </p>
+        </div>
+        <div class="tech-tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>PHP</span>
+          <span>MySQL</span>
+        </div>
+      </div>
+
+      <!-- Rock Paper Scissors Game -->
+      <div class="project-card" data-category="web">
+        <div class="project-image">
+          <i class="fas fa-hand-rock"></i>
+        </div>
+        <div class="project-header">
+          <h3>Rock Paper Scissors Game</h3>
+          <div class="project-links">
+            <a href="https://github.com/Ajaybevara/RockPaperScissor" target="_blank"
+               class="project-link" title="GitHub Repo">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://ajaybevara.github.io/RockPaperScissor/" target="_blank"
+               class="project-link" title="Live Demo">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+        <div class="project-summary">
+          <p>
+            Interactive game with score tracking, built using HTML, CSS, and JavaScript.
+          </p>
+        </div>
+        <div class="tech-tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+        <!-- Certificates Section -->
+        <section id="certificates" class="section certificates-section">
+            <div class="container">
+                <h2 class="section-title">Certificates</h2>
+                <div class="certificates-filter">
+                    <button class="filter-btn active" data-filter="all">All Certificates</button>
+                    <button class="filter-btn" data-filter="aiml">AI/ML</button>
+                    <button class="filter-btn" data-filter="web">Web Development</button>
+                    <button class="filter-btn" data-filter="database">Database</button>
+                </div>
+                <div class="certificates-grid">
+                    <div class="certificate-card" data-category="aiml">
+                        <div class="certificate-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="certificate-info">
+                            <h3>IBM Certified Python Basics for Data Science</h3>
+                            <div class="issuer">IBM (edX)</div>
+                            <p class="date">2024</p>
+                            <p class="certificate-summary">Certification in Python fundamentals for data science applications.</p>
+                            <a href="https://www.credly.com/badges/your-ibm-python-basics-badge" target="_blank" class="certificate-credential-link" title="View Credential">
+                                <i class="fas fa-external-link-alt"></i> View Credential
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="certificate-card" data-category="aiml">
+                        <div class="certificate-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="certificate-info">
+                            <h3>AI & ML Hackathon Winner</h3>
+                            <div class="issuer">Tech Event 2025</div>
+                            <p class="date">2025</p>
+                            <p class="certificate-summary">First place in AI/ML hackathon with innovative machine learning solution.</p>
+                            <a href="https://example.com/hackathon-credential" target="_blank" class="certificate-credential-link" title="View Achievement">
+                                <i class="fas fa-medal"></i> View Achievement
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="certificate-card" data-category="aiml">
+                        <div class="certificate-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="certificate-info">
+                            <h3>IBM Certified Big Data, Hadoop, and Spark Basics</h3>
+                            <div class="issuer">IBM (edX)</div>
+                            <p class="date">2024</p>
+                            <p class="certificate-summary">Certification in big data technologies like Hadoop and Spark.</p>
+                             <a href="https://www.credly.com/badges/your-ibm-bigdata-badge" target="_blank" class="certificate-credential-link" title="View Credential">
+                                <i class="fas fa-external-link-alt"></i> View Credential
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="certificate-card" data-category="web">
+                        <div class="certificate-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="certificate-info">
+                            <h3>Completed MERN Stack Development Workshop</h3>
+                            <div class="issuer">Local Tech Community</div>
+                            <p class="date">2024</p>
+                            <p class="certificate-summary">Hands-on experience in MERN stack (MongoDB, Express.js, React, Node.js) development.</p>
+                             <a href="https://example.com/mern-workshop-credential" target="_blank" class="certificate-credential-link" title="View Credential">
+                                <i class="fas fa-external-link-alt"></i> View Credential
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="certificate-card" data-category="aiml">
+                        <div class="certificate-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <div class="certificate-info">
+                            <h3>Coursera Project: Exception Handling in Python</h3>
+                            <div class="issuer">Coursera</div>
+                            <p class="date">2024</p>
+                            <p class="certificate-summary">Completed project on robust error handling in Python programming.</p>
+                             <a href="https://www.coursera.org/account/accomplishments/verify/your-python-exception-handling-code" target="_blank" class="certificate-credential-link" title="View Credential">
+                                <i class="fas fa-external-link-alt"></i> View Credential
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="certificate-card" data-category="aiml">
+                        <div class="certificate-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="certificate-info">
+                            <h3>Completed Generative AI Workshop</h3>
+                            <div class="issuer">Tech Innovators</div>
+                            <p class="date">2025</p>
+                            <p class="certificate-summary">Explored and implemented concepts of Generative AI models.</p>
+                             <a href="https://example.com/gen-ai-workshop-credential" target="_blank" class="certificate-credential-link" title="View Credential">
+                                <i class="fas fa-external-link-alt"></i> View Credential
+                            </a>
+                        </div>
+                    </div>
+
+                     <div class="certificate-card" data-category="database">
+                        <div class="certificate-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="certificate-info">
+                            <h3>SQL Certificate</h3>
+                            <div class="issuer">Great Learning Academy</div>
+                            <p class="date">2024</p>
+                            <p class="certificate-summary">Foundational certificate in SQL for database management and querying.</p>
+                             <a href="https://www.greatlearning.in/verify/your-sql-certificate" target="_blank" class="certificate-credential-link" title="View Credential">
+                                <i class="fas fa-external-link-alt"></i> View Credential
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Let's Connect</h3>
+                        <p>I'm always interested in new opportunities and collaborations. Feel free to reach out!</p>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="contact-details">
+                                <span class="contact-label">Email</span>
+                                <a href="mailto:rajasekhar6105@gmail.com" class="contact-value">rajasekhar6105@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div class="contact-details">
+                                <span class="contact-label">Phone</span>
+                                <a href="tel:+917793966921" class="contact-value">+91-7793966921</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="contact-details">
+                                <span class="contact-label">Location</span>
+                                <span class="contact-value">Andhra Pradesh, India</span>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="https://github.com/Ajaybevara" target="_blank" class="social-link" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/bevara-rajasekhar-0b50a0319" target="_blank" class="social-link" title="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" target="_blank" class="social-link" title="Twitter (Placeholder)">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="subject" placeholder="Subject" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
